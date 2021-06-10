@@ -1,4 +1,4 @@
-package com.example.demo.topic;
+package com.example.course.topic;
 
 import org.springframework.stereotype.Service;
 
@@ -21,5 +21,19 @@ public class TopicService {
     }
     public void addTopic(Topic topic){
         allTopics.add(topic);
+    }
+
+    public void updateTopic(Topic topic, String id) {
+        for (int i = 0; i < allTopics.size(); i++) {
+            if (allTopics.get(i).getId().equals(id)){
+                allTopics.set(i, topic);
+                return;
+            }
+        }
+
+    }
+
+    public void deleteTopic( String id) {
+        allTopics.removeIf(topic1 -> topic1.getId().equals(id));
     }
 }

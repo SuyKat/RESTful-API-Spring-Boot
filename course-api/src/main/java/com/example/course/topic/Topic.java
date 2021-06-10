@@ -1,4 +1,4 @@
-package com.example.demo.topic;
+package com.example.course.topic;
 
 public class Topic {
     String id;
