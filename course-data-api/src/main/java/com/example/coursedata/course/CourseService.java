@@ -3,7 +3,6 @@ package com.example.coursedata.course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,10 +11,8 @@ public class CourseService {
     @Autowired
     private CourseRepository courseRepository;
 
-    public List<Course> getAllCourses(){
-        List<Course> courseList = new ArrayList<>();
-        courseRepository.findAll().forEach(courseList::add);
-        return courseList;
+    public List<Course> getAllCourses(String topicId){
+        return courseRepository.findByTopicId(topicId);
     }
     public Optional<Course> getCourse(String id){
         return courseRepository.findById(id);
