@@ -1,4 +1,4 @@
-package com.zen.moviecatalogservice;
+package com.zen.moviecatalog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
