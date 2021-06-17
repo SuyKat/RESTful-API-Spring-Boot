@@ -22,7 +22,7 @@ public class CatalogController {
     RestTemplate restTemplate = new RestTemplate();
     @RequestMapping("/{userId}")
     List<CatalogItem> getCatalog(@PathVariable("userId") String userId){
-        UserRating userRating = restTemplate.getForObject("http://localhost:8083/ratings/users" + userId, UserRating.class);
+        UserRating userRating = restTemplate.getForObject("http://localhost:8083/ratings/users/" + userId, UserRating.class);
 
         return userRating.getUserRating().stream().map(rating -> {
             Movie movie = restTemplate.getForObject("http://localhost:8081/movies/" + rating.getId(), Movie.class);
