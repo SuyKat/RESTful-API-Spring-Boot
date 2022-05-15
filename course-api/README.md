@@ -1,11 +1,23 @@
-# Course Data APi
-  The APIs store data in inbuilt DB in SpringBoot. 
-Also, one Topic can have multiple courses.
-
+# Course APi
 **Endpoints**
 
 GET
 - http://localhost:8080/topics
-- http://localhost:8080/topics/{topicId}
-- http://localhost:8080/topics/{topicId}/courses/
-- http://localhost:8080/topics/{topicId}/courses/{courseId}
+- http://localhost:8080/topics/{id}
+
+POST
+- http://localhost:8080/topics
+  
+    Provide one topic in body as json object
+
+PUT
+
+- http://localhost:8080/topics/{id}
+  
+  Provide updated info in the body for {id}
+
+PUT
+
+- http://localhost:8080/topics/{id}
+   
+   Deletes entry for {id}
